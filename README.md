@@ -17,6 +17,8 @@ Training data is infinitely generated and augmented by changing it's brightness 
 ### Results
 I trained the model for a total of 15 epochs on 3 different partitionings of training/validation data. The minimum validation loss was ```8.61```. I used the ```adam``` optimizer with a learning rate of ```1e-4``` and a batch-size of ```64``` for ```validation_loss > 20``` and ```32``` afterwards.
 
+Test predictions are rolling averaged over 4 frames.
+
 ### Improvements
 I think having more time and compute power would have yielded a better model and hence better results. Some improvements:
 - find more ways of augmenting the training data: flip the frames, apply perspective transformations, flip the optical flow hue.
