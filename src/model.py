@@ -45,9 +45,6 @@ def create(learning_rate=1e-3):
     adam = keras.optimizers.Adam(learning_rate=learning_rate)
     model.compile(optimizer=adam, loss='mse')
 
-    model.load_weights('./last_weights.hdf5')
-    print('loaded weights')
-
     print('created model...')
     print(model.summary())
 
